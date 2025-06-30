@@ -1,3 +1,14 @@
+import { AddCountry } from "../components/AddCountry";
+import { Countries } from "../components/Countries";
+
+
+
 export function HomePage() {
-  return <p>You should start working here!</p>;
+
+  return (
+    <div>
+      <Countries />
+      <AddCountry />
+    </div>
+  );
 }

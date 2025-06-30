@@ -1,0 +1,16 @@
+overwrite: true
+schema: "http://localhost:4000"
+documents:
+  - "./src/requetes/*.requests.ts"
+  - "./src/requetes/queries/*.ts"
+  - "./src/requetes/mutations/*.ts"
+
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+
+    config:
+      addTypename: false
