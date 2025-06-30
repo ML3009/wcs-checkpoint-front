@@ -51,8 +51,11 @@ export function AddCountry() {
 
    return (
       <div className="flex flex-col items-center justify-start mt-9">
-         <form onSubmit={(e) => handleSubmit(e, data)} className="flex flex-row items-end gap-4 w-full max-w-3xl">
-            <div className="flex flex-col flex-1">
+         <form
+            onSubmit={(e) => handleSubmit(e, data)}
+            className="flex flex-col md:flex-row gap-4 w-full max-w-3xl px-4 mx-auto justify-center items-center"
+         >
+            <div className="flex flex-col flex-1 w-full md:w-auto">
                <label className="text-rose-700 font-semibold mb-1">Name</label>
                <input
                   name="name"
@@ -60,10 +63,10 @@ export function AddCountry() {
                   value={data.name}
                   type="text"
                   onChange={(e) => handleChange(e)}
-                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300"
+                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300 w-full"
                />
             </div>
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 w-full md:w-auto">
                <label className="text-rose-700 font-semibold mb-1">Emoji</label>
                <input
                   name="emoji"
@@ -71,10 +74,10 @@ export function AddCountry() {
                   value={data.emoji}
                   type="text"
                   onChange={(e) => handleChange(e)}
-                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300"
+                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300 w-full"
                />
             </div>
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 w-full md:w-auto">
                <label className="text-rose-700 font-semibold mb-1">Code</label>
                <input
                   name="code"
@@ -82,10 +85,10 @@ export function AddCountry() {
                   value={data.code}
                   type="text"
                   onChange={(e) => handleChange(e)}
-                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300"
+                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300 w-full"
                />
             </div>
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 w-full md:w-auto">
                <label className="text-rose-700 font-semibold mb-1">Continent</label>
                <select
                   name="continent"
@@ -96,7 +99,7 @@ export function AddCountry() {
                         continent: { id: Number(e.target.value) }
                      }))
                   }
-                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300"
+                  className="px-4 py-2 rounded-lg border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300 w-full"
                >
                   <option value="">Select a continent</option>
                   {continentsData?.continents.map((continent) => (
@@ -106,8 +109,8 @@ export function AddCountry() {
                   ))}
                </select>
             </div>
-            <div className="flex flex-col justify-end">
-               <button type="submit" className="h-12 px-6 py-2 rounded-lg bg-gradient-to-r from-rose-400 to-pink-200 text-rose-900 font-semibold shadow border-2 border-white transition-transform hover:scale-105 hover:shadow-lg">
+            <div className="flex flex-col justify-end w-full md:w-auto">
+               <button type="submit" className="h-12 px-6 py-2 rounded-lg bg-gradient-to-r from-rose-400 to-pink-200 text-rose-900 font-semibold shadow border-2 border-white transition-transform hover:scale-105 hover:shadow-lg w-full md:w-auto">
                   Add
                </button>
             </div>
