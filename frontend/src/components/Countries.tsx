@@ -19,9 +19,9 @@ export function Countries() {
             country ? (
                 <div
                     key={country.id}
-                    className="flex flex-col items-center px-6 py-4 rounded-xl shadow-md border-2 border-rose-200 w-48 hover:scale-105 hover:shadow-lg transition-transform"
+                    className="flex flex-col items-center px-3 py-2 rounded-xl shadow-md border-2 border-rose-200 w-32 md:px-6 md:py-4 md:w-48 hover:scale-105 hover:shadow-lg transition-transform"
                 >
-                    <div className="text-4xl mb-2">{country.emoji}</div>
+                    <div className="text-3xl md:text-4xl mb-2">{country.emoji}</div>
                     <Link
                         to="/country"
                         state={{ code: country.code }}
