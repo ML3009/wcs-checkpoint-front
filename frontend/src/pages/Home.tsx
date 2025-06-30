@@ -7,8 +7,8 @@ export function HomePage() {
 
   return (
     <div>
-      <Countries />
       <AddCountry />
+      <Countries />
     </div>
   );
 }
