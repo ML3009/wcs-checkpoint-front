@@ -10,7 +10,7 @@ export function Countries() {
     (COUNTRIES);
 
     if (countriesLoading) {
-        return <h1>Veuillez patienter...</h1>
+        return <h1>Please wait...</h1>
     }
 
     return (
@@ -19,7 +19,7 @@ export function Countries() {
             country ? (
                 <div
                     key={country.id}
-                    className="flex flex-col items-center px-6 py-4 rounded-xl bg-gradient-to-r from-rose-100 to-pink-50 shadow-md border-2 border-rose-200 w-48 hover:scale-105 hover:shadow-lg transition-transform"
+                    className="flex flex-col items-center px-6 py-4 rounded-xl shadow-md border-2 border-rose-200 w-48 hover:scale-105 hover:shadow-lg transition-transform"
                 >
                     <div className="text-4xl mb-2">{country.emoji}</div>
                     <Link
