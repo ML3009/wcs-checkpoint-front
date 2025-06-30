@@ -21,10 +21,10 @@ export function Country() {
     
     return (
         <div className="flex flex-col items-center justify-start mt-12">
-            <div className="px-8 py-6 rounded-xl shadow-lg border-2 border-rose-200 text-center w-full max-w-md">
-                <div className="text-9xl mb-4">{countryData?.country.emoji}</div>
-                <h2 className="text-xl text-rose-400">Name: {countryData?.country.name} ({countryData?.country.code})</h2>
-                <div className="text-xl text-rose-400">Continent: {countryData?.country.continent?.name}</div>
+            <div className="px-3 py-2 md:px-8 md:py-6 rounded-xl shadow-lg border-2 border-rose-200 text-center w-full max-w-xs md:max-w-md">
+                <div className="text-6xl md:text-9xl mb-4">{countryData?.country.emoji}</div>
+                <h2 className="text-lg md:text-xl text-rose-400">Name: {countryData?.country.name} ({countryData?.country.code})</h2>
+                <div className="text-lg md:text-xl text-rose-400">Continent: {countryData?.country.continent?.name}</div>
             </div>
         </div>
     )
